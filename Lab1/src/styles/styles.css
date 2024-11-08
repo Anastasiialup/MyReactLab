@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+.ReactPiano__Keyboard {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.ReactPiano__Key {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+    transition: background-color 0.1s ease, transform 0.1s ease;
+}
+
+.ReactPiano__Key--natural {
+    background: #f6f5f3;
+    border: 1px solid #888;
+    border-radius: 0 0 6px 6px;
+    height: 150px;
+    width: 40px;
+    margin: 0 2px;
+}
+
+.ReactPiano__Key--accidental {
+    background: #555;
+    border: 1px solid #fff;
+    border-radius: 0 0 4px 4px;
+    position: absolute;
+    height: 100px;
+    width: 30px;
+    top: 0;
+    margin-left: -15px;
+    z-index: 1;
+}
+
+.ReactPiano__Key--natural:last-child {
+    margin-right: 0;
+}
+
+/* Стиль для активних клавіш */
+.ReactPiano__Key--active {
+    background: #808c8e;
+    transform: translateY(2px);
+}
+
+.ReactPiano__Key--active.ReactPiano__Key--accidental {
+    background: #808c8e;
+    border-color: #fff;
+    height: 98px;
+}
+
+.ReactPiano__Key--active.ReactPiano__Key--natural {
+    background: #808c8e;
+    height: 148px;
+}
+
+.ReactPiano__NoteLabel {
+    font-size: 12px;
+    user-select: none;
+}
+
+.ReactPiano__NoteLabel--natural {
+    color: #888;
+}
+
+.ReactPiano__NoteLabel--accidental {
+    color: #f8e8d5;
+}
