@@ -1,0 +1,71 @@
+/* Загальні стилі */
+body {
+    font-family: "Comic Sans MS", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #95ed95;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+/* Стилі для повідомлення про оновлення даних */
+.refresh-message {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #0a6c0d;
+    color: white;
+    border-radius: 5px;
+    max-width: 250px; /* Встановлюємо максимальну ширину */
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стилі для виведення даних */
+.data-display {
+    margin-top: 10px;
+    padding: 25px;
+    background-color: #5cdf5c; /* Більш яскравий фон для відображення даних */
+    border-radius: 5px;
+    max-width: 500px; /* Обмеження ширини */
+    margin-left: auto;
+    margin-right: auto; /* Центрування */
+}
+
+.data-display h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.data-display p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+button {
+    font-family: "Comic Sans MS", sans-serif;
+    background-color: #5cdf5c;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    transform: translateY(2px);
+}
