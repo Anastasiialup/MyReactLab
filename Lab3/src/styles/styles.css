@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #bdb4a5;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    overflow-y: auto;
+}
+
+form {
+    background-color: #a39885;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #685a42;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #271f11;
+}
+
+button[type="submit"] {
+    display: block;
+    margin: 20px auto;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.radio-group label {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.tshirt-preview img {
+    max-width: 40%;
+    border-radius: 5px;
+    margin: 20px auto 0;
+    display: block;
+}
+
+p {
+    color: #857355;
+    font-size: 0.9rem;
+}
+
+.thank-you-message {
+    text-align: center;
+    padding: 20px;
+    background-color: #514633;
+    color: white;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.thank-you-message h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.thank-you-message p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.thank-you-message button {
+    background-color: #685c47;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.thank-you-message button:hover {
+    background-color: #22190c;
+}
