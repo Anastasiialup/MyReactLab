@@ -1,33 +1,161 @@
-body {
-    font-family: Arial, sans-serif;
+/* Загальні стилі */
+* {
     margin: 0;
-    padding: 0;
+    padding-top: 20px;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS";
+}
+
+body {
+    background-color: #eadbc1;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
-}
-
-h1 {
     color: #333;
 }
 
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #514633;
+    text-align: center;
+}
+
+div {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #7a674e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px; 
+}
+
+button:hover {
+    background-color: #372d1b;
+    transform: scale(1.05);
+}
+
+input {
+    padding: 12px;
+    font-size: 16px;
+    width: calc(100% - 24px);
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Список завдань */
 ul {
     list-style: none;
     padding: 0;
 }
 
 li {
+    margin-top: 10px;
     font-size: 18px;
-    margin: 8px 0;
-    padding: 5px;
-    transition: all 0.3s;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+li.completed {
+    background-color: #e0ffe0;
+    color: #4CAF50;
+    text-decoration: line-through;
+}
+
+li.incomplete {
+    background-color: #ffebeb;
+    color: #f44336;
+}
+
+li:hover {
+    background-color: #f5f5f5;
+}
+
+/* Фільтрація */
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.filter-bar button {
+    background-color: #f1f1f1;
+    color: #333;
+    border: 2px solid #ddd;
+}
+
+#ext_installed_id {
+    visibility: hidden;
+}
+
+
+.filter-bar button:hover {
+    background-color: #ddd;
+}
+
+.filter-bar button.active {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}
+
+/* Відступи і центрування */
+input[type='text'] {
+    padding: 12px;
+    border-radius: 5px;
+    width: calc(100% - 24px);
+    border: 2px solid #ddd;
+    font-size: 16px;
 }
 
 button {
-    margin: 5px;
-    padding: 8px 12px;
+    padding: 12px 20px;
+    border-radius: 5px;
     font-size: 16px;
-    cursor: pointer;
+    width: calc(100% - 24px);
 }
+
+@media (max-width: 600px) {
+    div {
+        padding: 15px;
+        width: 90%;
+    }
+
+    input[type='text'] {
+        width: calc(100% - 24px);
+    }
+
+    button {
+        width: calc(100% - 24px);
+    }
+}
+
+
