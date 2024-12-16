@@ -51,10 +51,16 @@ const App = () => {
     }, [users]);
 
     return (
-        <div>
+        <div className="app-container">
             <h1>User Management</h1>
-            {/* Передаємо searchQuery і setSearchQuery */}
+
+            {/* Додавання користувача */}
+            <AddUser addUser={addUser} />
+
+            {/* Пошук користувача */}
             <FilterBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+
+            {/* Сортування */}
             <div>
                 <label htmlFor="sortMethod">Sort By: </label>
                 <select
@@ -66,7 +72,8 @@ const App = () => {
                     <option value="date">Date Added</option>
                 </select>
             </div>
-            <AddUser addUser={addUser} />
+
+            {/* Виведення списку користувачів */}
             <UserList users={sortedUsers} deleteUser={deleteUser} />
         </div>
     );
