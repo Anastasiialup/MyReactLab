@@ -2,17 +2,15 @@ import React from "react";
 
 const FilterBar = ({ searchQuery, setSearchQuery }) => {
     return (
-        <div className="filter-bar">
-            {/* Поле для вводу пошукового запиту */}
+        <div>
             <input
                 type="text"
-                placeholder="Search users..."
+                placeholder="Search Users"
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => setSearchQuery(e.target.value)} // Використовуємо setSearchQuery
             />
         </div>
     );
 };
 
-// Додаємо export default
 export default FilterBar;
